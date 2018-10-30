@@ -2,22 +2,37 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
 public class ClickingClass implements MouseListener {
+
+	static class Click {
+		public int x;
+		public int y;
+		public boolean needed;
+
+		public Click() {
+			this.x = 0;
+			this.y = 0;
+			this.needed = false;
+		}
+	}
+
+	Click click = new Click();
+
 	@Override
 	public void mouseClicked(MouseEvent arg0) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void mouseEntered(MouseEvent arg0) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void mouseExited(MouseEvent arg0) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
@@ -25,14 +40,24 @@ public class ClickingClass implements MouseListener {
 		// TODO Auto-generated method stub
 		int x = arg0.getX();
 		int y = arg0.getY();
-		System.out.println("x ="+x+" y = "+y);
-		
+		this.click.needed = true;
+		this.click.x = x;
+		this.click.y = y;
+		System.out.println("Click coordinates is : x =" + x + " y = " + y);
+
 	}
 
 	@Override
 	public void mouseReleased(MouseEvent arg0) {
 		// TODO Auto-generated method stub
-		
+
+	}
+
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		String s = " x = " + this.click.x + " y = " + this.click.y + " and check = " + this.click.needed;
+		return s;
 	}
 
 }
