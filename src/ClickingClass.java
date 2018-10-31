@@ -19,25 +19,24 @@ public class ClickingClass implements MouseListener {
 
 	@Override
 	public void mouseClicked(MouseEvent arg0) {
-		// TODO Auto-generated method stub
+		System.out.println("+");
 
 	}
 
 	@Override
 	public void mouseEntered(MouseEvent arg0) {
-		// TODO Auto-generated method stub
+		System.out.println("+");
 
 	}
 
 	@Override
 	public void mouseExited(MouseEvent arg0) {
-		// TODO Auto-generated method stub
+		System.out.println("+");
 
 	}
 
 	@Override
 	public void mousePressed(MouseEvent arg0) {
-		// TODO Auto-generated method stub
 		int x = arg0.getX();
 		int y = arg0.getY();
 		this.click.needed = true;
@@ -49,13 +48,12 @@ public class ClickingClass implements MouseListener {
 
 	@Override
 	public void mouseReleased(MouseEvent arg0) {
-		// TODO Auto-generated method stub
+		System.out.println("+");
 
 	}
 
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
 		String s = " x = " + this.click.x + " y = " + this.click.y + " and check = " + this.click.needed;
 		return s;
 	}
