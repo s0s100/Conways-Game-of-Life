@@ -8,15 +8,15 @@ public class KeyManager implements KeyListener {
 		int num = arg0.getKeyCode();
 		if (num == 32) {
 			if (MainField.pause) {
-				MainField.setPause(false);;
+				MainField.setPause(false);
 				System.out.println("Game continued");
-			}else {
+			} else {
 				MainField.setPause(true);
 				System.out.println("Game paused");
-				
+
 			}
 		}
-		
+
 	}
 
 	@Override
